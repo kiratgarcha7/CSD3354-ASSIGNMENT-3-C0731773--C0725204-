@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace CSD3354_ASSIGNMENT_3
-namespace ConsoleApp1
 {
     public delegate void Sort_DataStructure();
 
@@ -15,8 +14,9 @@ namespace ConsoleApp1
     class Program
     {
         static void Main(string[] args)
-        static void Main(string[] args)
         {
+            Student a = new Student();
+            a.Announcement();
 
         }
     }
@@ -34,7 +34,7 @@ namespace ConsoleApp1
             try
             {
 
-                using (StreamReader sr = new StreamReader("U:/Users/725866/file.txt"))
+                using (StreamReader sr = new StreamReader("U:/Users/725866/cSharp/names.txt"))
                 {
                     string line;
 
@@ -160,4 +160,4 @@ namespace BubbleSort
             Console.Read();
         }
     }
-} 
+}
