@@ -17,6 +17,8 @@ namespace CSD3354_ASSIGNMENT_3
         {
             Student a = new Student();
             a.Announcement();
+            Console.WriteLine(a.AverageStudentGPA());
+            Console.ReadLine();
 
         }
     }
@@ -26,6 +28,35 @@ namespace CSD3354_ASSIGNMENT_3
         String Student_name;
         String StudentID;
         double StudentGPA;
+
+        String[] names = new String[5] { "Bill", "Mary", "Laura", "Sam", "Steve" };
+
+        ArrayList a1 = new ArrayList();
+
+
+
+
+        Random r1;
+
+        public Student()
+        {
+            r1 = new Random();
+            Student_name = names[r1.Next(0, 4)];
+            StudentID = Convert.ToString(r1.Next(1000, 9999));
+            StudentGPA = Convert.ToDouble(r1.Next(1, 99));
+
+        }
+
+        public double AverageStudentGPA()
+        {
+            double sum = 0;
+            // TO DO: implement the algorithm to calculate the Students' average GPA
+            for (int i = 0; i < names.Length; i++)
+            {
+                sum += StudentGPA;
+            }
+            return StudentGPA;
+        }
 
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
@@ -51,23 +82,6 @@ namespace CSD3354_ASSIGNMENT_3
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-        }
-
-        String[] names = new String[5] { "Bill", "Mary", "Laura", "Sam", "Steve" };
-        Random r1;
-
-        public Student()
-        {
-            r1 = new Random();
-            Student_name = names[r1.Next(0, 4)];
-            StudentID = Convert.ToString(r1.Next(1000, 9999));
-            StudentGPA = Convert.ToDouble(r1.Next(1, 99));
-        }
-
-        public double AverageStudentGPA()
-        {
-            // TO DO: implement the algorithm to calculate the Students' average GPA
-            return 0;
         }
     }
 
