@@ -15,11 +15,34 @@ namespace CSD3354_ASSIGNMENT_3
     {
         static void Main(string[] args)
         {
-            Student a = new Student();
-            a.Announcement();
-            Console.WriteLine(a.AverageStudentGPA());
+
+
+            DataStructureStack b = new DataStructureStack();
+            b.Run();
+            AverageStudentGPA();
+
             Console.ReadLine();
 
+        }
+        static void AverageStudentGPA()
+        {
+            Student student1 = new Student();
+            Student student2 = new Student();
+            Student student3 = new Student();
+            Student student4 = new Student();
+            Student student5 = new Student();
+
+            ArrayList stu = new ArrayList();
+            stu.Add(student1);
+            stu.Add(student2);
+            stu.Add(student3);
+            stu.Add(student4);
+            stu.Add(student5);
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(stu[0]);
+            }
         }
     }
 
@@ -30,11 +53,6 @@ namespace CSD3354_ASSIGNMENT_3
         double StudentGPA;
 
         String[] names = new String[5] { "Bill", "Mary", "Laura", "Sam", "Steve" };
-
-        ArrayList a1 = new ArrayList();
-
-
-
 
         Random r1;
 
@@ -47,16 +65,7 @@ namespace CSD3354_ASSIGNMENT_3
 
         }
 
-        public double AverageStudentGPA()
-        {
-            double sum = 0;
-            // TO DO: implement the algorithm to calculate the Students' average GPA
-            for (int i = 0; i < names.Length; i++)
-            {
-                sum += StudentGPA;
-            }
-            return StudentGPA;
-        }
+
 
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
